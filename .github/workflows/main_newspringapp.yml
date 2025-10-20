@@ -24,6 +24,9 @@ jobs:
           java-version: '21'
           distribution: 'microsoft'
 
+      - name: Ensure Gradle wrapper is executable
+        run: chmod +x gradlew
+
       - name: Build with Gradle
         run: ./gradlew clean build
 
